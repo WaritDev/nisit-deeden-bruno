@@ -1,0 +1,16 @@
+meta {
+  name: Requests In Committee
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/committee/requests
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

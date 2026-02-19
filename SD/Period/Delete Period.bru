@@ -1,0 +1,20 @@
+meta {
+  name: Delete Period
+  type: http
+  seq: 1
+}
+
+delete {
+  url: {{host}}/sd/periods/{{id}}
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id: 86626942-b6ef-4f88-869a-0ec2bf4d024c
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

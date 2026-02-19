@@ -1,0 +1,29 @@
+meta {
+  name: Create Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/student/apply
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "campus_id": 1,
+    "award_id": ""
+  }
+}
+
+body:multipart-form {
+  campus_id: 1 @contentType(Text)
+  award_id: 44766bcf-5032-47a1-a005-0f0786f95678 @contentType(Text)
+  files: @file(/Users/warit/Downloads/AcademicPaper.pdf) @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

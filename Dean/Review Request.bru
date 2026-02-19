@@ -1,0 +1,29 @@
+meta {
+  name: Review Request
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{host}}/dean/requests/103bc2cb-9d44-4226-8109-6a746f6ce3da/review
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "reject",
+    "comment": "ตรวจสอบคุณสมบัติเบื้องต้นแล้ว ครบถ้วนตามเกณฑ์ครับ"
+  }
+}
+
+body:multipart-form {
+  action: approve @contentType(Text)
+  comment: ลงนามอนุมัติเรียบร้อย @contentType(Text)
+  signed_file: @file(/Users/warit/Downloads/AcademicPaper.pdf) @contentType(File)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

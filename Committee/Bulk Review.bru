@@ -1,0 +1,29 @@
+meta {
+  name: Bulk Review
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/committee/applications/bulk-review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "approve_ids": [
+      "1fd1a1f4-5237-4ec2-87ed-cba13d289447",
+      "03671f00-46c7-4f62-b4a2-3c8904ac8c71"
+    ],
+    "reject_ids": [
+      "047f4167-c105-49d2-9b4f-774e4fd4c951"
+    ],
+    "comment": "มติที่ประชุมคณะกรรมการพิจารณารางวัลนิสิตดีเด่น ครั้งที่ 1/2569: อนุมัติผู้ที่มีคุณสมบัติครบถ้วนตามเกณฑ์ และให้ปฏิเสธคำร้องที่เอกสารผลการเรียนไม่เป็นทางการ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

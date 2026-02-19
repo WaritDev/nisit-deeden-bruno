@@ -1,0 +1,16 @@
+meta {
+  name: Get Current Period With All Awards
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/student/current-period
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

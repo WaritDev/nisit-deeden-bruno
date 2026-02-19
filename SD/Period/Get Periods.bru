@@ -1,0 +1,16 @@
+meta {
+  name: Get Periods
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/sd/periods
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

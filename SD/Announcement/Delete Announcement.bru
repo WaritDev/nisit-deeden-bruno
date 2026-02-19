@@ -1,0 +1,28 @@
+meta {
+  name: Delete Announcement
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{host}}/sd/announcements/{{id}}
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "[ขยายเวลา] เปิดรับสมัครนิสิตดีเด่น ประจำปี 2569",
+    "description": "ขยายเวลาการยื่นสมัครถึงวันที่ 15 เมษายน 2569",
+    "is_active": true
+  }
+}
+
+vars:pre-request {
+  id: be9f7917-c1cc-4aa1-965c-5f21adc8e7a2
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

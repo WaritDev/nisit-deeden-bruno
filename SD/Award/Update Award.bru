@@ -1,0 +1,41 @@
+meta {
+  name: Update Award
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{host}}/sd/awards/{{id}}
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+      "campus_id": 1,
+      "award_type": "ทุนการศึกษา",
+      "award_name": "ทุนนิสิตเรียนดี 2569",
+      "description": "มอบให้แก่นิสิตที่มีผลการเรียนยอดเยี่ยม",
+      "template_file_url": "https://example.com/files/form.pdf",
+      "requirement_json": "{\"min_gpax\": 3.50, \"year\": [2, 3]}",
+      "period_id": "8481358c-9a3d-471a-9696-646655440000"
+  }
+}
+
+body:multipart-form {
+  award_type: ทุนวิจัยนิสิต
+  award_name: ทุนวิจัยนิสิตดีเด่น 2569 (แก้ไขครั้งที่ 1)
+  is_active: true
+  description: อัปเดตรายละเอียดใหม่...
+  requirement_json: {"min_gpax": 3.50}
+  template_file: @file(/Users/warit/Downloads/AcademicPaper.pdf)
+}
+
+vars:pre-request {
+  id: 2685a9e6-cc6b-4c8f-af1c-99a0fe68c682
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

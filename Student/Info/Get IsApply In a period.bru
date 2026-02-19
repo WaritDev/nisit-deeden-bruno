@@ -1,0 +1,20 @@
+meta {
+  name: Get IsApply In a period
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/student/check-application?period_id=f3991a9c-9e97-40d4-b970-3dca2f09e52f
+  body: none
+  auth: inherit
+}
+
+params:query {
+  period_id: f3991a9c-9e97-40d4-b970-3dca2f09e52f
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

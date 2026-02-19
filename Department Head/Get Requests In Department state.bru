@@ -1,0 +1,16 @@
+meta {
+  name: Get Requests In Department state
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/department-head/requests
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

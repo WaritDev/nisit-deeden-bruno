@@ -1,0 +1,23 @@
+meta {
+  name: Review Request
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{host}}/department-head/requests/e3f646e7-516c-420d-a0fa-de338ac0dc20/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "reject", //or approve
+    "comment": "ตรวจสอบคุณสมบัติเบื้องต้นแล้ว ครบถ้วนตามเกณฑ์ครับ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

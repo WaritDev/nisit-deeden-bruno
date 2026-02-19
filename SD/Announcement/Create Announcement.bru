@@ -1,0 +1,24 @@
+meta {
+  name: Create Announcement
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/sd/announcements
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "เปิดรับสมัครนิสิตดีเด่น ประจำปี 2569",
+    "description": "ขอเชิญนิสิตทุกคณะยื่นใบสมัครทุนนิสิตดีเด่นได้ตั้งแต่วันนี้ ถึงวันที่ 31 มีนาคม 2569",
+    "campus_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

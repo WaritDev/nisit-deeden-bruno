@@ -1,0 +1,16 @@
+meta {
+  name: Get My Requests
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/student/my-requests
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

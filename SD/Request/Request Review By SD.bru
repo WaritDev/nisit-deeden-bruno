@@ -1,0 +1,27 @@
+meta {
+  name: Request Review By SD
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{host}}/sd/requests/{{id}}/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "need_docs", // or need_docs
+    "comment": "ตรวจสอบคุณสมบัติเบื้องต้นแล้ว ครบถ้วนตามเกณฑ์ครับ"
+  }
+}
+
+vars:pre-request {
+  id: e4840de6-feb9-4ec0-a110-ab0500a3939d
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

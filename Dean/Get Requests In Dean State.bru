@@ -1,0 +1,16 @@
+meta {
+  name: Get Requests In Dean State
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/dean/requests
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Change Request Type
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/sd/requests/{{id}}/award-type
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "new_award_id": ""
+  }
+}
+
+vars:pre-request {
+  id: 716d3b12-efe1-434c-a495-18a6b3838e1e
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

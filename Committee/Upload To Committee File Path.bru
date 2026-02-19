@@ -1,0 +1,24 @@
+meta {
+  name: Upload To Committee File Path
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{host}}/committee/upload/period/{{id}}
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/Users/warit/Downloads/policy-palantir-19feb.pdf)
+}
+
+vars:pre-request {
+  id: 63ac82e6-5b27-499b-a791-2e0607d7fd77
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

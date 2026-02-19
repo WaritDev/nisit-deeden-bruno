@@ -1,0 +1,23 @@
+meta {
+  name: Review Request
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{host}}/vice-dean/requests/c85ec1cc-0dfb-4669-a4d7-266bf45d09c5/review
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "action": "reject", // or approve
+    "comment": "ตรวจสอบคุณสมบัติเบื้องต้นแล้ว ครบถ้วนตามเกณฑ์ครับ"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

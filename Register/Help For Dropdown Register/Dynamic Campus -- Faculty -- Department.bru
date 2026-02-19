@@ -1,0 +1,20 @@
+meta {
+  name: Dynamic Campus -> Faculty -> Department
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/university-structure?faculty_id=10
+  body: none
+  auth: inherit
+}
+
+params:query {
+  faculty_id: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
