@@ -1,0 +1,20 @@
+meta {
+  name: Get Request Detail
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/request/{{id}}/detail
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  id: bf2d667d-bd82-478f-9c68-28a01f7cf22d
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
