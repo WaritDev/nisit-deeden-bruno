@@ -1,0 +1,22 @@
+meta {
+  name: Create Campus
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/admin/campus
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "campus_name": "บางแสน"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

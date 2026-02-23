@@ -1,0 +1,26 @@
+meta {
+  name: Get Campus By ID
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/admin/campus/{{id}}
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "campus_name": "บางแสน"
+  }
+}
+
+vars:pre-request {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Update Campus
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/admin/campus/{{id}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "campus_name": "บางเขน",
+    "is_active": true
+  }
+}
+
+vars:pre-request {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

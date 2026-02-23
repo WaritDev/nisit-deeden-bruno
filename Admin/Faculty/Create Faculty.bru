@@ -1,0 +1,23 @@
+meta {
+  name: Create Faculty
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/admin/faculty
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "campus_id": 1,
+    "faculty_name": "คณะวิศวกรรมศาสตร์"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

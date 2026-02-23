@@ -1,0 +1,26 @@
+meta {
+  name: Get All Department By Faculty
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/admin/faculty/:facultyID/departments
+  body: none
+  auth: inherit
+}
+
+params:path {
+  facultyID: 10
+}
+
+body:json {
+  {
+    "campus_name": "บางแสน"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

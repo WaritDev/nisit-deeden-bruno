@@ -1,0 +1,22 @@
+meta {
+  name: Get All Campus
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/admin/campus
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "campus_name": "บางแสน"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Update Department
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/admin/faculty/:facultyID/departments/:deptID
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facultyID: 10
+  deptID: 1
+}
+
+body:json {
+  {
+    "department_name": "วิศวกรรมนิวเคลียร์",
+    "is_active": false
+  }
+}
+
+vars:pre-request {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

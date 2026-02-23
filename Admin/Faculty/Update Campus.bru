@@ -1,0 +1,32 @@
+meta {
+  name: Update Campus
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/admin/campus/:campusID/faculties/:facultyID
+  body: json
+  auth: inherit
+}
+
+params:path {
+  campusID: 1
+  facultyID: 10
+}
+
+body:json {
+  {
+    "faculty_name": "คณะวิศวกรรมศาสตร์ (ปรับปรุงชื่อ)",
+    "is_active": false
+  }
+}
+
+vars:pre-request {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
