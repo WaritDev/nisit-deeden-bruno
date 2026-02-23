@@ -1,0 +1,31 @@
+meta {
+  name: Resubmit Docs To SD
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/student/requests/{{id}}/resubmit
+  body: multipartForm
+  auth: inherit
+}
+
+body:json {
+  {
+    ""
+  }
+}
+
+body:multipart-form {
+  files: @file(/Users/warit/Downloads/General-Request.pdf)
+  files: @file(/Users/warit/Downloads/policy-palantir.pdf)
+}
+
+vars:pre-request {
+  id: 33dee102-7089-4d00-80b3-56ddcd3d9a5c
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
