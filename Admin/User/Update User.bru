@@ -1,0 +1,28 @@
+meta {
+  name: Update User
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{host}}/admin/users/:userID
+  body: json
+  auth: inherit
+}
+
+params:path {
+  userID: 8060f07b-84e8-4b2c-b3be-76e7819e98ef
+}
+
+body:json {
+  {
+    "role_id": "02aa9b6f-b9ad-4465-b05a-fa905ddf2ab0",
+    "ref_type": "CAMPUS",
+    "ref_id": "10000"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

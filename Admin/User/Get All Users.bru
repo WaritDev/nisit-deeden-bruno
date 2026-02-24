@@ -1,0 +1,36 @@
+meta {
+  name: Get All Users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/admin/users?page=1&limit=100
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page: 1
+  limit: 100
+}
+
+body:json {
+  {
+    "username": "b6610450001",
+    "email": "student.new@ku.th",
+    "prefix": "นาย",
+    "fname": "สมมติ",
+    "lname": "ตั้งใจเรียน",
+    "ref_type": "DEPARTMENT",
+    "ref_id": "11001",
+    "role_id": "0da6ee93-f138-4d33-8601-b38f20e5440f", 
+    "date_of_birth": "2004-05-20T00:00:00Z",
+    "profile_url": "https://meepos.s3.ap-southeast-1.amazonaws.com/profiles/avatar.png"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
