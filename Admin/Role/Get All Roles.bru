@@ -1,0 +1,24 @@
+meta {
+  name: Get All Roles
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/admin/roles
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "role_name": "FACULTY_ADMIN",
+    "ref_type": "FACULTY",
+    "ref_id": "11000"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

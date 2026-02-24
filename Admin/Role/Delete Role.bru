@@ -1,0 +1,28 @@
+meta {
+  name: Delete Role
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/admin/role/:refType/:refID/:roleID
+  body: json
+  auth: inherit
+}
+
+params:path {
+  refType: FACULTY
+  refID: 11000
+  roleID: a070611c-9578-4220-b644-eb8d86c16f65
+}
+
+body:json {
+  {
+    "role_name": "DEAN"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

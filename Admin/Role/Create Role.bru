@@ -1,0 +1,24 @@
+meta {
+  name: Create Role
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/admin/role
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "role_name": "FACULTY_ADMIN",
+    "ref_type": "FACULTY",
+    "ref_id": "11000"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
