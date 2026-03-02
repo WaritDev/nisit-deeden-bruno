@@ -1,0 +1,20 @@
+meta {
+  name: Get Award Template_url By Request_id
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/student/requests/:reqID/award-template
+  body: none
+  auth: inherit
+}
+
+params:path {
+  reqID: 3a0f7488-c644-4c84-89b5-580b95806af4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

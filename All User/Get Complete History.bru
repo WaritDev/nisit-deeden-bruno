@@ -1,16 +1,15 @@
 meta {
-  name: Get My Profile
+  name: Get Complete History
   type: http
   seq: 3
 }
 
 get {
-  url: {{host}}/student/profile
+  url: {{host}}/history-success
   body: none
   auth: inherit
 }
 
 settings {
   encodeUrl: true
-  timeout: 0
 }
